@@ -1,3 +1,4 @@
+package Code;
 /**
  * Interface for manipulating the motors of a trash cleaning robot.
  */
