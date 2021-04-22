@@ -1,4 +1,4 @@
 package Code;
 
-public enum Direction {Right, Left
-}
+//Only two direction are allowed
+public enum Direction {Right, Left}

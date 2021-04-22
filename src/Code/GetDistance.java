@@ -1,5 +1,6 @@
 package Code;
 
+//Implement a concrete visitor to compute total distance to move
 public class GetDistance implements Visitor<Double>{
     @Override
     public Double visitMoveForward(MoveForward pMoveForward) {

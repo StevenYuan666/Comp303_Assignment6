@@ -1,0 +1,2 @@
+MoveForward action performed, battery level is 95
+MoveForward action performed, battery level is 94

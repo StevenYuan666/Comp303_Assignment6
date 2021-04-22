@@ -1,0 +1,12 @@
+MoveForward action performed, battery level is 96
+Turn action performed, battery level is 94
+MoveForward action performed, battery level is 93
+Grab action performed, battery level is 92
+Compact action performed, battery level is 90
+Turn action performed, battery level is 88
+MoveForward action performed, battery level is 84
+Grab action performed, battery level is 82
+Release action performed, battery level is 81
+EmptyCompactor action performed, battery level is 79
+Forcing Recharge First: MoveForward action performed, battery level is 98
+Composite Action: Move Foward 20 and Turn Left including { MoveForward Turn } action performed, battery level is 90

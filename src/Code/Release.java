@@ -1,6 +1,15 @@
 package Code;
 
 public class Release extends BasicAction{
+    //Since the action is not for a specific robot, we can implement singleton here
+    private static final Release aInstance = new Release();
+
+    private Release(){}
+
+    public static Release getInstance(){
+        return Release.aInstance;
+    }
+
     @Override
     public void execute(Robot r) throws RobotDamagedException {
         super.execute(r);

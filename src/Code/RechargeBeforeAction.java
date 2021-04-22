@@ -20,7 +20,13 @@ public class RechargeBeforeAction implements Action{
     }
 
     public Action getAction(){
-        return this.aAction;
+        if(this.aAction instanceof CompositeAction){
+            //Need a shallow copy here to avoid the reference leaking
+            return new CompositeAction((CompositeAction) this.aAction);
+        }
+        else{
+            return this.aAction;
+        }
     }
 
     @Override

@@ -1,13 +1,30 @@
 package Code;
 
+import java.util.HashMap;
+
 public class Turn extends BasicAction{
+    /*
+    Since the action is not for a specific robot, we can implement flyweight here
+    Using Direction as key, and Turn object as value. There are only two instances.
+     */
+    private static final HashMap<Direction, Turn> aInstances = new HashMap<Direction, Turn>();
+    static{
+        Turn.aInstances.put(Direction.Left, new Turn(Direction.Left));
+        Turn.aInstances.put(Direction.Right, new Turn(Direction.Right));
+    }
     private final double degree;
-    public Turn(Direction pDirection){
+    private Turn(Direction pDirection){
         if(pDirection == Direction.Left){
             this.degree = -90.0;
         }
-        else if(pDirection == Direction.Right){
+        else {
             this.degree = 90.0;
+        }
+    }
+
+    public static Turn getInstance(Direction pDirection){
+        if(Turn.aInstances.containsKey(pDirection)) {
+            return Turn.aInstances.get(pDirection);
         }
         else{
             //For any invalid input, we will not turn the robot

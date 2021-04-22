@@ -1,6 +1,15 @@
 package Code;
 
 public class Grab extends BasicAction{
+    //Since the action is not for a specific robot, we can implement singleton here
+    private static final Grab aInstance = new Grab();
+
+    private Grab(){}
+
+    public static Grab getInstance(){
+        return Grab.aInstance;
+    }
+
     @Override
     public void execute(Robot r) throws RobotDamagedException {
         super.execute(r);

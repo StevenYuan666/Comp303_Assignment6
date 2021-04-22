@@ -1,8 +1,7 @@
 package Code;
 
+//Implement a concrete visitor to
 public class GetNumOfCompacted implements Visitor<Integer>{
-    int count = 0;
-
     @Override
     public Integer visitMoveForward(MoveForward pMoveForward) {
         return 0;
@@ -25,20 +24,12 @@ public class GetNumOfCompacted implements Visitor<Integer>{
 
     @Override
     public Integer visitCompact(Compact pCompact) {
-        //TODO: May have some essential problem here
-        if(this.count < 10){
-            this.count += 1;
-            return 1;
-        }
-        else{
-            //TODO: we may throw exception for this case
-            return 0;
-        }
+        //We don't check the precondition in the visitor
+        return 1;
     }
 
     @Override
     public Integer visitEmptyCompactor(EmptyCompactor pEmptyCompactor) {
-        this.count = 0;
         return 0;
     }
 

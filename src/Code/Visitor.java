@@ -1,5 +1,10 @@
 package Code;
 
+/*
+Since the return type is not always same, we can use a Type generics here so that the user can
+define the needed return type by themselves.
+ */
+
 public interface Visitor<T> {
     public T visitMoveForward(MoveForward pMoveForward);
     public T visitTurn(Turn pTurn);
